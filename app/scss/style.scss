@@ -38,3 +38,40 @@
     line-height: 22px;
   }
 }
+
+.footer {
+  &__content {
+    background: rgb(223, 223, 223);
+    padding: 60px 0 80px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    width: 540px;
+  }
+  &__info-title {
+    color: $title;
+    @extend %title-font;
+    margin-bottom: 14px;
+    line-height: 23px;
+  }
+  &__info-text {
+    margin-bottom: 16px;
+  }
+  &__info-email {
+    font-weight: 600;
+    font-size: 14px;
+    color: $title;
+    margin-bottom: 22px;
+    padding-left: 30px;
+    display: inline-block;
+  }
+  &__copyright {
+    background-color: $title;
+    color: rgb(161, 161, 161);
+    text-align: center;
+    padding: 42px 0 41px;
+  }
+}

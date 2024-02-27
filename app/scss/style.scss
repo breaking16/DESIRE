@@ -180,6 +180,11 @@
   width: 100%;
   background: rgb(255, 255, 255);
   padding-top: 40px;
+  box-shadow: -2px 3px 17px 0px;
+  transition: all 0.6;
+  &.rightside-menu--close {
+    transform: translateX(500%);
+  }
   &__close {
     background-color: transparent;
     border: none;
@@ -202,8 +207,27 @@
     @extend%title-font;
     font-size: 36px;
     line-height: 51px;
+    position: relative;
+    margin-bottom: 17px;
+    padding-bottom: 17px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 252px;
+      margin: 0 auto;
+      height: 1px;
+      background: rgb(109, 114, 120);
+    }
   }
   &__text {
     margin-bottom: 75px;
   }
+  &__images {
+    max-width: 485px;
+  }
+}
+.top {
 }

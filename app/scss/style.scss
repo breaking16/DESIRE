@@ -176,12 +176,13 @@
   right: 0;
   top: 0;
   bottom: 0;
+  z-index: 15;
   max-width: 694px;
   width: 100%;
   background: rgb(255, 255, 255);
   padding-top: 40px;
-  box-shadow: -2px 3px 17px 0px;
-  transition: all 0.6;
+  box-shadow: -2px 3px 17px 0px #000;
+  transition: all 0.5;
   &.rightside-menu--close {
     transform: translateX(500%);
   }
@@ -204,7 +205,7 @@
   }
   &__title {
     color: $title;
-    @extend%title-font;
+    @extend %title-font;
     font-size: 36px;
     line-height: 51px;
     position: relative;
@@ -266,6 +267,7 @@
     padding-bottom: 26px;
     margin-bottom: 26px;
     position: relative;
+    @extend %title-font;
     &::after {
       content: "";
       position: absolute;
@@ -283,16 +285,15 @@
 
 .new-collection {
   text-align: center;
-  padding: 45px 0 105px;
+  padding: 45px 0 35px;
   &__title {
-    font-family: "Montserrat", sans-serif;
     color: $title;
     font-size: 36px;
-    font-weight: 700;
     line-height: 51px;
     padding-bottom: 25px;
     margin-bottom: 25px;
     position: relative;
+    @extend %title-font;
     &::after {
       content: "";
       position: absolute;
@@ -311,20 +312,21 @@
   }
 }
 
-.colection {
+.collection {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px;
+  padding-bottom: 70px;
   &__item {
     position: relative;
     &:hover {
-      .colection__info {
+      .collection__info {
         opacity: 1;
       }
     }
   }
   &__images {
-    min-width: 350px;
+    min-height: 350px;
     object-fit: cover;
   }
   &__info {
@@ -343,13 +345,13 @@
     transition: all 0.5s;
   }
   &__info-title {
-    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     line-height: 25px;
     color: $title;
     padding-bottom: 19px;
     margin-bottom: 19px;
     position: relative;
+    @extend %title-font;
     &::after {
       content: "";
       position: absolute;
@@ -375,9 +377,7 @@
   background-image: url(../images/decor-bg.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 600px;
   &__title {
-    font-family: "Montserrat", sans-serif;
     max-width: 730px;
     color: $title;
     font-size: 60px;
@@ -385,6 +385,7 @@
     padding-bottom: 22px;
     margin-bottom: 22px;
     position: relative;
+    @extend %title-font;
     &::after {
       content: "";
       position: absolute;
@@ -397,5 +398,80 @@
   }
   &__text {
     max-width: 540px;
+  }
+}
+
+.works-path {
+  padding: 80px 0 30px;
+  &__title {
+    @extend %title-font;
+    text-align: center;
+    color: $title;
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 51px;
+  }
+  &__items-box {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid rgba(54, 56, 56, 0.7);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 10px;
+      height: 10px;
+      background: rgb(54, 56, 56);
+      border-radius: 50%;
+    }
+  }
+  &__item {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
+  &__item--production {
+    margin-left: 317px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 20px;
+      width: 2px;
+      background: rgb(54, 56, 56, 0.7);
+    }
+  }
+  &__item--production,
+  &__item--consultation {
+    padding-bottom: 38px;
+  }
+  &__item--measuring {
+    padding-top: 38px;
+    margin-left: 305px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 2px;
+      background: rgb(54, 56, 56, 0.7);
+    }
+  }
+  &__item-title {
+    margin-left: 13px;
+    color: $title;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  &__item-text {
+    margin-top: 13px;
   }
 }

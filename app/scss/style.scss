@@ -71,8 +71,12 @@
   &__info-title {
     color: $title;
     @extend %title-font;
+    // font-family: Montserrat;
+    // font-weight: 700;
+    line-height: 23px;
     margin-bottom: 14px;
     line-height: 23px;
+    font-size: 16px;
   }
   &__info-text {
     margin-bottom: 16px;
@@ -615,5 +619,40 @@
   }
   &__content {
     padding: 130px 0 40px;
+  }
+  &__title {
+    color: $title;
+    @extend %title-font;
+    font-size: 36px;
+    line-height: 60px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 200px;
+      background: rgb(109, 114, 120);
+      border: 1px solid rgb(151, 151, 151);
+    }
+  }
+  &__text {
+    padding-left: 284px;
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  &__popup {
+    background-image: url(../images/popup-bg.jpeg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 414px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

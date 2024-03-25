@@ -29,6 +29,34 @@ $('.contact-slider').slick({
   slidesToScroll: 10,
   dots: true,
   arrows: false,
+  responsive:[
+    {
+    breakpoint: 1700,
+    settings:{
+     slidesToShow: 8,
+     slidesToScroll: 8,
+    }
+  },
+  {
+    breakpoint: 1511,
+    settings:{
+     slidesToShow: 6,
+     slidesToScroll: 6,
+    }
+  },
+    {
+    breakpoint: 600,
+    settings:{
+
+    }
+  },
+    {
+    breakpoint: 480,
+    settings:{
+
+    }
+  },
+  ]
 });
 
 $('.article-slider__box').slick({
